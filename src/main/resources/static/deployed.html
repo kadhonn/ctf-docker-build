@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>My Static File Hoster</title>
+</head>
+<body>
+<h1>Deployed Successfully!</h1>
+<p>Give it a try by going to: <a id="newurl"></a></p>
+<script>let url = new URLSearchParams(window.location.search).get("url");
+let linkElement = document.getElementById("newurl");
+linkElement.setAttribute("href", url);
+linkElement.textContent = url;
+</script>
+</body>
+</html>

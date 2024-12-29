@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>My Static File Hoster</title>
+</head>
+<body>
+<h1>Hello To My Static File Hoster™️</h1>
+<p>Upload a new Site by giving it a name and a zipfile! We will host those files for 10 minutes after they are
+    running!</p>
+<form action="/deploy" enctype="multipart/form-data" method="post">
+    <label for="name">The name of the deployment:</label><input type="text" id="name" name="name"/>
+    <br/>
+    <label for="zipfile">Your static files!</label><input type="file" id="zipfile" name="zipfile"/>
+    <br/>
+    <input type="submit" value="Deploy!"/>
+</form>
+</body>
+</html>
