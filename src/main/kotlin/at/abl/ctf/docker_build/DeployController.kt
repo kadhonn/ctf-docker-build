@@ -10,13 +10,11 @@ import org.springframework.web.util.UriUtils
 @Controller
 class DeployController(val deployService: DeployService) {
 
-
     @PostMapping(value = ["/deploy"], consumes = ["multipart/form-data"])
     fun deploy(
-        @RequestParam("name", required = true) name: String,
         @RequestParam("zipfile", required = true) zipfile: MultipartFile
     ): RedirectView {
-        val url = deployService.deploy(name, zipfile.bytes)
+        val url = deployService.deploy(zipfile.bytes)
         return RedirectView(
             "/deployed.html?url=" + UriUtils.encodeQueryParam(
                 url, Charsets.UTF_8

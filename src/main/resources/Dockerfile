@@ -1,2 +1,2 @@
-FROM docker.io/httpd:2.4
+FROM localhost/base-mystaticfilehoster
 COPY ./data/ /usr/local/apache2/htdocs/
